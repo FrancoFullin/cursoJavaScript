@@ -72,7 +72,6 @@ let total = (cantidadJugos*valorJugo) + (cantidadCocas*valorCoca) + (cantidadSpr
 
 
 alert(`El valor final es de $${total}`)
-document.write(`El valor final es de $${total}`)
 
 /* function calcularTotal() {
     let cantidadJugos = document.getElementById(`jugo`).value
