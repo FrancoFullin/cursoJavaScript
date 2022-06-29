@@ -1,77 +1,71 @@
-console.log(`inicio`)
-let cantidadJugos = parseInt(prompt(`Cuantos jugos de naranja vas a comprar`))
-while (isNaN (cantidadJugos) || cantidadJugos < 0) {
-    alert(`Valor ingresado incorrecto, por favor ingrese la cantidad de jugos a comprar`)
-    cantidadJugos = parseInt(prompt(`Cuantos jugos de naranja vas a comprar`))
+function pedirCantidad(nombreBebida){
+    let cantidad = parseInt(prompt(`Cuantos ${nombreBebida} vas a comprar`))
+while (isNaN (cantidad) || cantidad < 0) {
+    alert(`Valor ingresado incorrecto, por favor ingrese la cantidad de ${nombreBebida} que vas a comprar`)
+    cantidad = parseInt(prompt(`Cuantos ${nombreBebida} de naranja vas a comprar`))
+}
+    return cantidad
 }
 
+let cantidadJugos = pedirCantidad(`Jugos`)
+/* console.log(cantidadJugos) */
+let cantidadCocas = pedirCantidad(`Cocas`)
+/* console.log(cantidadCocas) */
+let cantidadSprites = pedirCantidad(`Sprites`)
+/* console.log(cantidadSprites) */
+let cantidadVodkas = pedirCantidad(`Vodkas`)
+/* console.log(cantidadVodkas) */
+let cantidadFantas = pedirCantidad(`Fantas`)
+/* console.log(cantidadFantas) */
+let cantidadAguas = pedirCantidad(`Aguas`)
+/* console.log(cantidadAguas) */
 
-let cantidadCocas = parseInt(prompt(`Cuantas coca colas vas a comprar`))
-while (isNaN (cantidadCocas) || cantidadCocas < 0) {
-    alert(`Valor ingresado incorrecto, por favor ingrese la cantidad de cocas a comprar`)
-    cantidadCocas = parseInt(prompt(`Cuantas coca colas vas a comprar`))
+let valorJugos = 100
+let valorCocas = 120
+let valorSprites = 110
+let valorVodkas = 250
+let valorFantas = 120
+let valorAguas = 80
+
+/* function precioTotal(cantidadBebidas, valorBebidas){
+    if (cantidadBebidas >= 5) {
+        valorBebidas - 30
+    }
+    cantidadBebidas * valorBebidas
+    return valorBebidas
 }
 
+let valorTotalJugos = precioTotal(cantidadJugos, 100)
+console.log(valorTotalJugos) */
 
-let cantidadSprites = parseInt(prompt(`Cuantos sprites vas a comprar`))
-while (isNaN (cantidadSprites) || cantidadSprites < 0) {
-    alert(`Valor ingresado incorrecto, por favor ingrese la cantidad de sprites a comprar`)
-    cantidadSprites = parseInt(prompt(`Cuantos sprites vas a comprar`))
-}
-
-
-let cantidadVodkas = parseInt(prompt(`Cuantos vodkas vas a comprar`))
-while (isNaN (cantidadVodkas) || cantidadVodkas < 0) {
-    alert(`Valor ingresado incorrecto, por favor ingrese la cantidad de vodkas a comprar`)
-    cantidadVodkas = parseInt(prompt(`Cuantos vodkas vas a comprar`))
-}
-
-
-let cantidadFantas = parseInt(prompt(`Cuantas fantas vas a comprar`))
-while (isNaN (cantidadFantas) || cantidadFantas < 0) {
-    alert(`Valor ingresado incorrecto, por favor ingrese la cantidad de fantas a comprar`)
-    cantidadFantas = parseInt(prompt(`Cuantas fantas vas a comprar`))
-}
-
-
-let cantidadAguas = parseInt(prompt(`Cuantas aguas vas a comprar`))
-while (isNaN (cantidadAguas) || cantidadAguas < 0) {
-    alert(`Valor ingresado incorrecto, por favor ingrese la cantidad de aguas a comprar`)
-    cantidadAguas = parseInt(prompt(`Cuantas aguas vas a comprar`))
-}
-
-let valorJugo = 100
 if (cantidadJugos > 8) {
-    valorJugo = 70
+    valorJugos = 70
 }
-
-let valorCoca = 120
 if (cantidadCocas > 10) {
-    valorCoca = 100
+    valorCocas = 100
 }
-let valorSprite = 110
 if (cantidadSprites > 7) {
-    valorSprite = 90
+    valorSprites = 90
 }
-let valorVodka = 250
 if (cantidadVodkas > 2) {
-    valorVodka = 175
+    valorVodkas = 175
 }
-let valorFanta = 120
 if (cantidadFantas > 5) {
-    valorFanta = 95
+    valorFantas = 95
 }
-let valorAgua = 80 
 if (cantidadAguas > 2) {
-    valorAgua = 50
+    valorAguas = 50
 }
 
-
-let total = (cantidadJugos*valorJugo) + (cantidadCocas*valorCoca) + (cantidadSprites*valorSprite)
-+ (cantidadVodkas*valorVodka) + (cantidadFantas*valorFanta) + (cantidadAguas*valorAgua)
+let total = (cantidadJugos*valorJugos) + (cantidadCocas*valorCocas) + (cantidadSprites*valorSprites)
++ (cantidadVodkas*valorVodkas) + (cantidadFantas*valorFantas) + (cantidadAguas*valorAguas)
 
 
 alert(`El valor final es de $${total}`)
+
+
+
+
 
 /* function calcularTotal() {
     let cantidadJugos = document.getElementById(`jugo`).value
